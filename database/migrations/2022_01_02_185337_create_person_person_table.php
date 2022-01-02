@@ -15,7 +15,7 @@ class CreatePersonPersonTable extends Migration
     {
         Schema::create('person_person', function (Blueprint $table) {
             $table->foreignId('person_id');
-            $table->foreignId('relation_person_id');
+            $table->foreignId('relation_person_id'); //itt person ID kéne, de nem kéne duplikált legyen.....
         });
     }
 
