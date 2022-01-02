@@ -7,11 +7,14 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use Backpack\CRUD\app\Models\Traits\CrudTrait; // <------------------------------- this one BackpackPermission
+use Spatie\Permission\Traits\HasRoles;// <---------------------- and this one BackpackPermission
 
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
-
+    use CrudTrait; // <----- this BackpackPermission
+    use HasRoles; // <------ and this BackpackPermission
     /**
      * The attributes that are mass assignable.
      *
