@@ -1,0 +1,17 @@
+models:
+  Person:
+    name: string
+    father_name: string nullable
+    mother_name: string nullable
+    phone: string nullable
+    email: string nullable
+    taj: number unique
+    slug: string unique
+    gender: string
+    timestamps: true
+    softDeletes: true
+    birthdate: date
+    relationships:
+      belongsToMany: Person
+
+seeders: Person

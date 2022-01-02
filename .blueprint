@@ -1,0 +1,8 @@
+created:
+    - database/factories/PersonFactory.php
+    - database/migrations/2022_01_02_185336_create_people_table.php
+    - database/migrations/2022_01_02_185337_create_person_person_table.php
+    - app/Models/Person.php
+    - database/seeders/PersonSeeder.php
+models:
+    Person: { name: string, father_name: 'string nullable', mother_name: 'string nullable', phone: 'string nullable', email: 'string nullable', taj: 'number unique', slug: 'string unique', gender: string, timestamps: timestamps, softdeletes: softDeletes, birthdate: date, relationships: { belongsToMany: Person } }
