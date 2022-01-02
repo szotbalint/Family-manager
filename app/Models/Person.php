@@ -26,6 +26,7 @@ class Person extends Model
         'slug',
         'gender',
         'birthdate',
+        'person',
     ];
 
     /**
